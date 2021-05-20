@@ -36,19 +36,22 @@ public class Ex0520_13 {
 	} // printMain()
 	
 	static void addStudent(Student[] student) {
+		String name;
+		int kor;
+		int eng;
+		int math;
 		for(int i=count; i < student.length; i++) {
-			student[i] = new Student(); // 있어야지만 저장할 수 있는 공간이 생긴다. 
 			System.out.println("이름 입력: (0. 메인메뉴로 이동)");
-			student[i].name = scan.next();
+			name = scan.next();
 			if (student[i].name.equals("0")) break;
 			System.out.println("국어 점수 입력: ");
-			student[i].kor = scan.nextInt();
+			kor = scan.nextInt();
 			System.out.println("영어 점수 입력: ");
-			student[i].eng = scan.nextInt();
+			eng = scan.nextInt();
 			System.out.println("수학 점수 입력: ");
-			student[i].math = scan.nextInt();
-			student[i].total = student[i].kor + student[i].eng + student[i].math;
-			student[i].avg = student[i].total / 3.0;
+			math = scan.nextInt();
+			
+			
 		}
 	}
 	
