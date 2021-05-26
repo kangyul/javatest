@@ -1,7 +1,8 @@
 
 public class Student {
-	static int stu_num;
-	static int index;
+	
+	static int count; // class variable
+	String stu_number; // S001 S002
 	String name;
 	int kor;
 	int eng;
@@ -10,7 +11,11 @@ public class Student {
 	double avg;
 	int rank;
 	
-	Student() {}
+	{
+		stu_number = "S" + String.format("%03d", ++count);
+	}
+	
+	Student() {} // 기본 생성자
 	Student(String name, int kor, int eng, int math) {
 		this.name = name;
 		this.kor = kor;
@@ -19,4 +24,5 @@ public class Student {
 		this.total = kor + eng + math;
 		this.avg = this.total / 3.0;
 	}
+	
 }
